@@ -31,12 +31,12 @@ float volatile current_to_actuatorTq;
 
 //todo move these parameters to NVRAM
 //specify motor parameters here:
-const uint16_t rated_current = 1300; //mA
-const uint16_t rated_torque = 45;   //cNm
+const uint16_t rated_current = 400; //mA, 0.9deg stepper
+const uint16_t rated_torque = 7;   //cNm, 0.9deg stepper
 
 //specify gearing parameters here:
-const float motor_gearbox_ratio = 5+2/11; //gearbox ratio - enter planetary gearbox tooth calculation for best accuracy
-const float final_drive_ratio = 2; //assembly gearing ratio
+const float motor_gearbox_ratio = 1; //cycloidal gearbox ratio 35 
+const float final_drive_ratio = 1; //assembly gearing ratio
 
 const int8_t anticogging_factor = 30; //minimizes cogging under load (0-127)
 

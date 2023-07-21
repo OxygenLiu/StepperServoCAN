@@ -30,8 +30,8 @@ MSG_STEERING_COMMAND_FRAME_ID = 0x22e
 MSG_STEERING_STATUS_FRAME_ID = 0x22f
 motor_bus_speed = 500  #StepperServoCAN baudrate 500kbps
 MOTOR_MSG_TS = 0.008 #10Hz
-MAX_TORQUE = 9
-MAX_ANGLE = 4095
+MAX_TORQUE = 0.15 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
+MAX_ANGLE = 3600 
 
 #game mode options
 torque_rise_factor = 1.2
