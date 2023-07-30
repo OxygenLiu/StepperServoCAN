@@ -30,7 +30,7 @@ MSG_STEERING_COMMAND_FRAME_ID = 0x22e
 MSG_STEERING_STATUS_FRAME_ID = 0x22f
 motor_bus_speed = 500  #StepperServoCAN baudrate 500kbps
 MOTOR_MSG_TS = 0.008 #10Hz
-MAX_TORQUE = 0.1 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
+MAX_TORQUE = 1.0 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
 MAX_ANGLE = 360 
 
 #game mode options
@@ -81,6 +81,7 @@ def CAN_tx_thread(p:Panda, bus):
   global _torque
   global _angle
   global _mode
+  #p.can_clear(bus)
   cnt_cmd = 0
   dat = steering_msg_cmd_data(cnt_cmd, _mode, _torque, _angle)
   p.can_send(MSG_STEERING_COMMAND_FRAME_ID, dat, bus)
@@ -96,7 +97,7 @@ def CAN_tx_thread(p:Panda, bus):
 def CAN_rx_thread(p:Panda, bus):
   t_status_msg_prev =0
   print("Starting CAN RX thread...")
-  p.can_clear(bus)     #flush the buffers
+  #p.can_clear(bus)     #flush the buffers
   while True:
     time.sleep(MOTOR_MSG_TS/10) #read fast enough so the CAN interface buffer is cleared each loop
     t = time.time()
@@ -107,7 +108,7 @@ def CAN_rx_thread(p:Panda, bus):
           hz = 1/(t - t_status_msg_prev)
         else:
           hz = -1
-        print(f"{hz:3.0f}Hz, addr: {address}, bus: {bus}, dat: {binascii.hexlify(dat)}")
+        #print(f"{hz:3.0f}Hz, addr: {address}, bus: {bus}, dat: {binascii.hexlify(dat)}")
         t_status_msg_prev = t
 
 def rise_and_decay(value:float, delta:float, max_min_limit:float):
@@ -152,26 +153,26 @@ def on_press(key):
       return False
     case 'm': #mode input mode
       _mode = (_mode + 1)%len(modes) # cycle thru modes
-      print(_mode)
       print(f"Mode: {[name for name, val in modes.items() if val == _mode][0]}")
+      #_torque = rise_and_decay(_torque, torque_decay_factor, MAX_TORQUE)
       _torque = 0.0
-      _angle = 0.0
+      time.sleep(0.1)
     case 'w' if _mode == modes['TORQUE_CONTROL']: # in wsad game mode, torque is controlled by keyboard and ramp generator
       _torque = rise_and_decay(_torque, torque_rise_factor, MAX_TORQUE)
     case 's' if _mode == modes['TORQUE_CONTROL']: 
       _torque = rise_and_decay(_torque, -torque_rise_factor, MAX_TORQUE)
     case 'd' if _mode == modes['ANGLE_CONTROL']:  
       _angle = rise_and_decay(_angle, angle_rise_factor, MAX_ANGLE)
-      _torque = max(abs(_torque), 0.01) #match torque signal to angle
+      _torque = max(abs(_torque), 0.1*MAX_TORQUE) #match torque signal to angle
     case 'a' if _mode == modes['ANGLE_CONTROL']: 
       _angle = rise_and_decay(_angle, -angle_rise_factor, MAX_ANGLE)
-      _torque = max(abs(_torque), 0.01) #match torque signal to angle
+      _torque = max(abs(_torque), -0.1*MAX_TORQUE) #match torque signal to angle
     #case range(9):
     #  _torque = float(key)
     #case '-':
     #  _torque = -1 * _torque
-    case _: # other key press
-      pass
+    #case _: # other key press
+    #  pass
   print_cmd_state()
 
 def on_release(key):
@@ -179,7 +180,16 @@ def on_release(key):
     global _angle
     global _mode
     _torque = 0.0
-    _torque = rise_and_decay(_torque, torque_decay_factor, MAX_TORQUE)
+
+    match key.char:
+      case ['w', 'q'] if _mode == modes['TORQUE_CONTROL']:
+        time.sleep(2) # hold torque for 2s  
+        _torque = rise_and_decay(_torque, torque_decay_factor, MAX_TORQUE)
+      #case ['a', 'd'] if _mode == modes['ANGLE_CONTROL']:
+      #  pass
+      #case _:
+      #  pass
+    
     print_cmd_state()  
 
 def motor_tester(bus):
@@ -212,7 +222,7 @@ def motor_tester(bus):
   _mode = modes['OFF']
 
   tx_t = threading.Thread(target=CAN_tx_thread, args=(panda, bus), daemon=True)
-  rx_t = threading.Thread(target=CAN_rx_thread, args=(panda, bus), daemon=True)
+  #rx_t = threading.Thread(target=CAN_rx_thread, args=(panda, bus), daemon=True)
   tx_t.start()
   #rx_t.start()
   
@@ -222,9 +232,12 @@ def motor_tester(bus):
   print(f"Mode: {[name for name, val in modes.items() if val == _mode][0]}")
   print("\nEnter torque value or used W/S keys to increase/decrease torque and A/D angle. Q to quit:") #show this before CAN messages spam the terminal
 
-  with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:  # Setup the listener of keyboard
-  #with keyboard.Listener(on_press=on_press) as listener:  # Setup the listener of keyboard
-    listener.join()  # Join the thread to the main thread 
+  with keyboard.Listener(on_press=on_press, on_release=on_release, suppress=True) as listener:  # Setup the listener of keyboard
+  #with keyboard.Listener(on_press=on_press, suppress=True) as listener:  # Setup the listener of keyboard
+    try:
+      listener.join()  # Join the thread to the main thread 
+    except KeyboardInterrupt:
+      return False
   
   print("Disabling output on Panda...")
   panda.set_safety_mode(Panda.SAFETY_SILENT)
