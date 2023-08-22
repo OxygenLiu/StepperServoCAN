@@ -30,8 +30,8 @@ MSG_STEERING_COMMAND_FRAME_ID = 0x22e
 MSG_STEERING_STATUS_FRAME_ID = 0x22f
 motor_bus_speed = 500  #StepperServoCAN baudrate 500kbps
 MOTOR_MSG_TS = 0.008 #10Hz
-MAX_TORQUE = 1.0 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
-MAX_ANGLE = 360 
+MAX_TORQUE = 32 #0.5 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
+MAX_ANGLE = 3600 
 
 #game mode options
 torque_rise_factor = 1.2
@@ -148,39 +148,43 @@ def on_press(key):
   global _angle
   global _mode
 
-  match key.char:
-    case 'q': 
-      return False
-    case 'm': #mode input mode
-      _mode = (_mode + 1)%len(modes) # cycle thru modes
-      print(f"Mode: {[name for name, val in modes.items() if val == _mode][0]}")
-      #_torque = rise_and_decay(_torque, torque_decay_factor, MAX_TORQUE)
-      _torque = 0.0
-      time.sleep(0.1)
-    case 'w' if _mode == modes['TORQUE_CONTROL']: # in wsad game mode, torque is controlled by keyboard and ramp generator
-      _torque = rise_and_decay(_torque, torque_rise_factor, MAX_TORQUE)
-    case 's' if _mode == modes['TORQUE_CONTROL']: 
-      _torque = rise_and_decay(_torque, -torque_rise_factor, MAX_TORQUE)
-    case 'd' if _mode == modes['ANGLE_CONTROL']:  
-      _angle = rise_and_decay(_angle, angle_rise_factor, MAX_ANGLE)
-      _torque = max(abs(_torque), 0.1*MAX_TORQUE) #match torque signal to angle
-    case 'a' if _mode == modes['ANGLE_CONTROL']: 
-      _angle = rise_and_decay(_angle, -angle_rise_factor, MAX_ANGLE)
-      _torque = max(abs(_torque), -0.1*MAX_TORQUE) #match torque signal to angle
-    #case range(9):
-    #  _torque = float(key)
-    #case '-':
-    #  _torque = -1 * _torque
-    #case _: # other key press
-    #  pass
-  print_cmd_state()
+  try: 
+    match key.char:
+      case 'q': 
+        return False
+      case 'm': #mode input mode
+        _mode = (_mode + 1)%len(modes) # cycle thru modes
+        print(f"Mode: {[name for name, val in modes.items() if val == _mode][0]}")
+        #_torque = rise_and_decay(_torque, torque_decay_factor, MAX_TORQUE)
+        _torque = 0.0
+        time.sleep(0.1)
+      case 'w' if _mode == modes['TORQUE_CONTROL']: # in wsad game mode, torque is controlled by keyboard and ramp generator
+        _torque = rise_and_decay(_torque, torque_rise_factor, MAX_TORQUE)
+      case 's' if _mode == modes['TORQUE_CONTROL']: 
+        _torque = rise_and_decay(_torque, -torque_rise_factor, MAX_TORQUE)
+      case 'd' if _mode == modes['ANGLE_CONTROL']:  
+        _angle = rise_and_decay(_angle, angle_rise_factor, MAX_ANGLE)
+        _torque = max(abs(_torque), 0.1*MAX_TORQUE) #match torque signal to angle
+      case 'a' if _mode == modes['ANGLE_CONTROL']: 
+        _angle = rise_and_decay(_angle, -angle_rise_factor, MAX_ANGLE)
+        _torque = max(abs(_torque), -0.1*MAX_TORQUE) #match torque signal to angle
+      #case range(9):
+      #  _torque = float(key)
+      #case '-':
+      #  _torque = -1 * _torque
+      #case _: # other key press
+      #  pass
+    print_cmd_state()
+  except: # ignore other keys
+    pass
 
 def on_release(key):
-    global _torque
-    global _angle
-    global _mode
-    _torque = 0.0
+  global _torque
+  global _angle
+  global _mode
+  _torque = 0.0
 
+  try:
     match key.char:
       case ['w', 'q'] if _mode == modes['TORQUE_CONTROL']:
         time.sleep(2) # hold torque for 2s  
@@ -188,9 +192,10 @@ def on_release(key):
       #case ['a', 'd'] if _mode == modes['ANGLE_CONTROL']:
       #  pass
       #case _:
-      #  pass
-    
+      #  pass  
     print_cmd_state()  
+  except:
+    pass 
 
 def motor_tester(bus):
   panda = Panda()
@@ -222,9 +227,9 @@ def motor_tester(bus):
   _mode = modes['OFF']
 
   tx_t = threading.Thread(target=CAN_tx_thread, args=(panda, bus), daemon=True)
-  #rx_t = threading.Thread(target=CAN_rx_thread, args=(panda, bus), daemon=True)
+  rx_t = threading.Thread(target=CAN_rx_thread, args=(panda, bus), daemon=True)
   tx_t.start()
-  #rx_t.start()
+  rx_t.start()
   
   print(f"Mode: {[name for name, val in modes.items() if val == _mode][0]}")
   time.sleep(0.1)
