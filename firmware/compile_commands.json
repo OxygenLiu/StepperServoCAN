@@ -1,0 +1,272 @@
+[
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/APP/main.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/APP/main.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/APP/main.c",
+        "output": ".pio/build/ServoCAN/src/APP/main.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -x assembler-with-cpp -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP -c -o .pio/build/ServoCAN/src/APP/startup_stm32f103xb.o src/APP/startup_stm32f103xb.S",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/APP/startup_stm32f103xb.S",
+        "output": ".pio/build/ServoCAN/src/APP/startup_stm32f103xb.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/APP/stm32f10x_it.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/APP/stm32f10x_it.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/APP/stm32f10x_it.c",
+        "output": ".pio/build/ServoCAN/src/APP/stm32f10x_it.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/A4950.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/A4950.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/A4950.c",
+        "output": ".pio/build/ServoCAN/src/BSP/A4950.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/MKS.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/MKS.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/MKS.c",
+        "output": ".pio/build/ServoCAN/src/BSP/MKS.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/actuator_config.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/actuator_config.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/actuator_config.c",
+        "output": ".pio/build/ServoCAN/src/BSP/actuator_config.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/board.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/board.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/board.c",
+        "output": ".pio/build/ServoCAN/src/BSP/board.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/calibration.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/calibration.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/calibration.c",
+        "output": ".pio/build/ServoCAN/src/BSP/calibration.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/can.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/can.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/can.c",
+        "output": ".pio/build/ServoCAN/src/BSP/can.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/control_api.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/control_api.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/control_api.c",
+        "output": ".pio/build/ServoCAN/src/BSP/control_api.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/delay.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/delay.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/delay.c",
+        "output": ".pio/build/ServoCAN/src/BSP/delay.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/display.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/display.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/display.c",
+        "output": ".pio/build/ServoCAN/src/BSP/display.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/encoder.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/encoder.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/encoder.c",
+        "output": ".pio/build/ServoCAN/src/BSP/encoder.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/flash.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/flash.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/flash.c",
+        "output": ".pio/build/ServoCAN/src/BSP/flash.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/nonvolatile.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/nonvolatile.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/nonvolatile.c",
+        "output": ".pio/build/ServoCAN/src/BSP/nonvolatile.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/sine.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/sine.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/sine.c",
+        "output": ".pio/build/ServoCAN/src/BSP/sine.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/spi.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/spi.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/spi.c",
+        "output": ".pio/build/ServoCAN/src/BSP/spi.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/stepper_controller.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/stepper_controller.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/stepper_controller.c",
+        "output": ".pio/build/ServoCAN/src/BSP/stepper_controller.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/BSP/tle5012.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/BSP/tle5012.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/BSP/tle5012.c",
+        "output": ".pio/build/ServoCAN/src/BSP/tle5012.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/CMSIS/core_cm3.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/CMSIS/core_cm3.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/CMSIS/core_cm3.c",
+        "output": ".pio/build/ServoCAN/src/CMSIS/core_cm3.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/CMSIS/system_stm32f10x.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/CMSIS/system_stm32f10x.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/CMSIS/system_stm32f10x.c",
+        "output": ".pio/build/ServoCAN/src/CMSIS/system_stm32f10x.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/misc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/misc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/misc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/misc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_adc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_adc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_adc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_adc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_bkp.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_bkp.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_bkp.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_bkp.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_can.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_can.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_can.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_can.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_cec.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_cec.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_cec.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_cec.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_crc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_crc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_crc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_crc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_dac.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_dac.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_dac.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_dac.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_dbgmcu.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_dbgmcu.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_dbgmcu.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_dbgmcu.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_dma.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_dma.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_dma.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_dma.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_exti.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_exti.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_exti.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_exti.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_flash.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_flash.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_flash.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_flash.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_fsmc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_fsmc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_fsmc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_fsmc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_gpio.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_gpio.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_gpio.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_gpio.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_i2c.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_i2c.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_i2c.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_i2c.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_iwdg.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_iwdg.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_iwdg.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_iwdg.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_pwr.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_pwr.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_pwr.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_pwr.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_rcc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_rcc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_rcc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_rcc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_rtc.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_rtc.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_rtc.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_rtc.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_sdio.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_sdio.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_sdio.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_sdio.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_spi.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_spi.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_spi.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_spi.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_tim.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_tim.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_tim.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_tim.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_usart.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_usart.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_usart.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_usart.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/LIB/src/stm32f10x_wwdg.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/LIB/src/stm32f10x_wwdg.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/LIB/src/stm32f10x_wwdg.c",
+        "output": ".pio/build/ServoCAN/src/LIB/src/stm32f10x_wwdg.o"
+    },
+    {
+        "command": "/home/oxygen/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/ServoCAN/src/OP/Msg.o -c -std=c99 -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m3 -W -Wall -pedantic -fsingle-precision-constant -Wdouble-promotion -Wfloat-conversion -O2 -g -DF_CPU=72000000L -DPLATFORMIO=60109 -DSTM32F103xB -DSTM32F1 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE=16000000 -DSYSCLK_FREQ_64MHz -Isrc/BSP -Isrc -Isrc/OP -Isrc/CMSIS -Isrc/LIB/inc -Isrc/APP src/OP/Msg.c",
+        "directory": "/home/oxygen/Working/StepperServo/StepperServoCAN/firmware",
+        "file": "src/OP/Msg.c",
+        "output": ".pio/build/ServoCAN/src/OP/Msg.o"
+    }
+]

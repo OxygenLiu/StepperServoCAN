@@ -31,16 +31,16 @@ float volatile current_to_actuatorTq;
 
 //todo move these parameters to NVRAM
 //specify motor parameters here:
-//const uint16_t rated_current = 400; //mA, 0.9deg stepper
-//const uint16_t rated_torque = 7;   //cNm, 0.9deg stepper
-const uint16_t rated_current = 1300; //mA, 1.8deg stepper
-const uint16_t rated_torque = 45;   //cNm, 1.8deg stepper
+//const uint16_t rated_current = 1000; //mA, 23mm, 1.8deg stepper
+//const uint16_t rated_torque = 13;   //cNm, 23mm, 1.8deg stepper
+const uint16_t rated_current = 1300; //mA, 1.8deg stepper, 48H
+const uint16_t rated_torque = 45;   //cNm, 1.8deg stepper, 48H
 
 //specify gearing parameters here:
-const float motor_gearbox_ratio = 1; //cycloidal gearbox ratio 35 
+const float motor_gearbox_ratio = 35; //cycloidal gearbox ratio 35 
 const float final_drive_ratio = 1; //assembly gearing ratio
 
-const int8_t anticogging_factor = 30; //minimizes cogging under load (0-127)
+const int8_t anticogging_factor = 0; //default 30, minimizes cogging under load (0-127)
 
 void update_actuator_parameters(void){
     gearing_ratio = motor_gearbox_ratio * final_drive_ratio;
@@ -48,6 +48,6 @@ void update_actuator_parameters(void){
     actuatorTq_to_current = (float) rated_current / rated_torque * 100 / gearing_ratio;
     current_to_actuatorTq = 1 / actuatorTq_to_current;
 
-    closeLoopMaxDes = 2000U; //sets maximum close loop current [mA] to limit stresses and heat generation
+    closeLoopMaxDes = 3300U; // default 2000U; //sets maximum close loop current [mA] to limit stresses and heat generation
 
 }
