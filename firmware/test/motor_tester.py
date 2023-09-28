@@ -30,8 +30,8 @@ MSG_STEERING_COMMAND_FRAME_ID = 0x22e
 MSG_STEERING_STATUS_FRAME_ID = 0x22f
 motor_bus_speed = 500  #StepperServoCAN baudrate 500kbps
 MOTOR_MSG_TS = 0.008 #10Hz
-MAX_TORQUE = 32 #0.5 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
-MAX_ANGLE = 3600 
+MAX_TORQUE = 23 #0.5 # 0.07Nm/0.4A *1.1A = 0.19Nm x 80% = 0.15Nm
+MAX_ANGLE = 360 
 
 #game mode options
 torque_rise_factor = 1.2
@@ -164,10 +164,10 @@ def on_press(key):
         _torque = rise_and_decay(_torque, -torque_rise_factor, MAX_TORQUE)
       case 'd' if _mode == modes['ANGLE_CONTROL']:  
         _angle = rise_and_decay(_angle, angle_rise_factor, MAX_ANGLE)
-        _torque = max(abs(_torque), 0.1*MAX_TORQUE) #match torque signal to angle
+        _torque = max(abs(_torque), 0.2*MAX_TORQUE) #match torque signal to angle
       case 'a' if _mode == modes['ANGLE_CONTROL']: 
         _angle = rise_and_decay(_angle, -angle_rise_factor, MAX_ANGLE)
-        _torque = max(abs(_torque), -0.1*MAX_TORQUE) #match torque signal to angle
+        _torque = max(abs(_torque), -0.2*MAX_TORQUE) #match torque signal to angle
       #case range(9):
       #  _torque = float(key)
       #case '-':
